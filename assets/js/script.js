@@ -18,7 +18,17 @@ function openSocial(type) {
   window.open(url);
 }
 
+function centerIntroText() {
+  let introText = document.getElementById('intro-text');
+  introText.style.position = 'absolute';
+  introText.style.top = '50%';
+  introText.style.left = '50%';
+  introText.style.transform = 'translate(-50%, -50%)';
+}
+
 function startIntroTyping() {
+  centerIntroText();
+
   new TypeIt('#intro-text', {
     speed: 50,
   })
